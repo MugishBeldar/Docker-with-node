@@ -1,12 +1,12 @@
 const express = require("express");
 require("colors");
-// const connectDB = require("./config/db");
+const connectDB = require("./config/db");
 require('dotenv').config()
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
 const testRoute = require('./routes/testRoutes')
 
-// connectDB();
+connectDB();
 const app = express();
 
 app.use(express.json()); 

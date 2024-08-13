@@ -155,14 +155,35 @@ sudo docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v
 ```bash
 sudo docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
+
 21. To run compose file in production environment (for build image in production)
 
 ```bash
 sudo docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
 ```
+
 22. To delete compose file container with volumes
 
 ```bash
 sudo docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v
 ```
+
 ### Working with multiple containers
+
+- Edit in docker-compose.yml file.
+- run docker compose file.
+- iteracation with mongo inside container mongosh command with user name and password.
+- without monog volume it will not persist data when container is rebuild to handle this we have to make a volume in compose file.
+- Docker network used for mongo connection uri
+
+23. Access all networks
+
+```bash
+sudo docker network ls
+```
+
+24. Access docker network for specific container
+
+```bash
+sudo docker network inspect <network name>
+```

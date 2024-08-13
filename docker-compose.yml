@@ -1,8 +1,22 @@
 version: '3'
 services:
   node-app:
+    container_name: node-api
     build: .
     ports:
       - '3000:4000'
     environment:
-      - PORT=4000
+      PORT: 4000
+
+  mongo:
+    container_name: mongodb
+    image: mongo
+    # name volume 
+    volumes: 
+      - v-mongo-db:/data/db 
+
+# name volume declaration
+volumes:
+  # v-mongo-db: 
+  # or
+  v-mongo-db: {}
