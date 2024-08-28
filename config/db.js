@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
-const { MONOG_USER, MONGO_PASWD, MONGO_IP, MONGO_PORT, MONGO_DATABASE } = require("./config");
+const { MONGO_USER, MONGO_PASWD, MONGO_IP, MONGO_PORT, MONGO_DATABASE } = require("./config");
 require("colors");
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(
-      `mongodb://${MONOG_USER}:${MONGO_PASWD}@${MONGO_IP}:${MONGO_PORT}/${MONGO_DATABASE}`,
+      // without local host make it dynamic for local
+      `mongodb://${MONGO_USER}:${MONGO_PASWD}@${MONGO_IP}:${MONGO_PORT}/${MONGO_DATABASE}`,
       {
         authSource: "admin",
         useNewUrlParser: true,

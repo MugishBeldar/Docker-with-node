@@ -5,13 +5,15 @@ require('dotenv').config()
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
 const testRoute = require('./routes/testRoutes')
-
+const postRoute = require('./routes/postRouters')
 connectDB();
 const app = express();
-
 app.use(express.json()); 
 
 app.use("/api/test", testRoute);
+
+// localhost:3000/api/v1/post
+app.use('/api/v1/post', postRoute);
 
 // --------------------------deployment------------------------------
 

@@ -6,7 +6,7 @@ const postSchema = new mongoose.Schema({
     require: [true, "Post must have a title."]
   },
   body: {
-    type: Text,
+    type: String,
     required: [true, "Post must have a body."]
   }
 })

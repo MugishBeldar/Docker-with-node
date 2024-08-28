@@ -6,6 +6,7 @@ const notFound = (req, res, next) => {
 
 const errorHandler = (err, req, res, next) => {
   const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+  console.log('File:-- errorMiddleware.js, Line:-- 9 , err===> ', err);
   res.status(statusCode);
   res.json({
     message: err.message,

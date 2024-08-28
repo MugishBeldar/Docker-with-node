@@ -16,6 +16,8 @@ async function getAllPost(req, res, next) {
   } catch (error) {
     res.status(500).json({
       status: "Fail",
+      message : error._message,
+      error: error?.errors?.body?.properties?.message
     });
   }
 }
@@ -36,6 +38,8 @@ async function getPost(req, res, next) {
   } catch (error) {
     res.status(500).json({
       status: "Fail",
+      message : error._message,
+      error: error?.errors?.body?.properties?.message
     });
   }
 }
@@ -56,6 +60,8 @@ async function createPost(req, res, next) {
   } catch (error) {
     res.status(500).json({
       status: "Fail",
+      message : error._message,
+      error: error?.errors?.body?.properties?.message
     });
   }
 }
@@ -73,6 +79,8 @@ async function deletePost(req, res, next) {
   } catch (error) {
     res.status(500).json({
       status: "Fail",
+      message : error._message,
+      error: error?.errors?.body?.properties?.message
     });
   }
 }
@@ -93,6 +101,8 @@ async function updatePost(req, res, next) {
   } catch (error) {
     res.status(500).json({
       status: "Fail",
+      message : error._message,
+      error: error?.errors?.body?.properties?.message
     });
   }
 }
