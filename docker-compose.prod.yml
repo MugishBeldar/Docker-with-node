@@ -1,5 +1,9 @@
 version: '3'
 services:
+  nginx:
+    # port 80 for out production and port 80 used because nginx run on port 80 
+    ports:
+      - '80:80'
   node-app:
     build: 
       context: .

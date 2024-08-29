@@ -10,7 +10,7 @@ connectDB();
 const app = express();
 app.use(express.json()); 
 
-app.use("/api/test", testRoute);
+app.use("/api/v1/test", testRoute);
 
 // localhost:3000/api/v1/post
 app.use('/api/v1/post', postRoute);

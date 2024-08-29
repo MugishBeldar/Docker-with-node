@@ -187,3 +187,10 @@ sudo docker network ls
 ```bash
 sudo docker network inspect <network name>
 ```
+
+### Working with nginx and how to scale your node application 
+
+25. Scale your node application use --scale flag
+```bash
+sudo docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
+```
