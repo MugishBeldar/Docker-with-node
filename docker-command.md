@@ -188,9 +188,21 @@ sudo docker network ls
 sudo docker network inspect <network name>
 ```
 
-### Working with nginx and how to scale your node application 
+### Working with nginx and how to scale your node application
 
 25. Scale your node application use --scale flag
+
 ```bash
 sudo docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
 ```
+
+<!-- ################################################################################ -->
+
+### Loing in docker hub through cli using username and pat
+
+```bash
+sudo docker login -u mugishbeldar
+password: <inter your password or pat (pat is generated from docker hub account settings)>
+```
+
+<!-- ################################################################################ -->
