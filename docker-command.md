@@ -198,11 +198,44 @@ sudo docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scal
 
 <!-- ################################################################################ -->
 
+## Extra usefull docker commands
+
 ### Loing in docker hub through cli using username and pat
 
 ```bash
 sudo docker login -u mugishbeldar
 password: <inter your password or pat (pat is generated from docker hub account settings)>
+```
+
+### create docker container
+
+```bash
+sudo docker create --name <give container name what you want> <image name or image id>
+```
+
+### start docker container with argument -a (attached it keep watching container logs)
+
+```bash
+sudo docker start -a <container name or containr id>
+```
+
+### for stop a docker runing container
+
+```bash
+sudo docker stop <container name or container id>
+sudo docker kill <container name or container id>
+```
+
+### -it flag is equivalent to -i -t
+
+```bash
+sudo docker exec -i -t <container name or container id> === sudo docker -it <container name or container id>
+```
+
+### docker exec command with docker sh (shell)
+
+```bash
+sudo docker exec -it <container name or container id> sh
 ```
 
 <!-- ################################################################################ -->
