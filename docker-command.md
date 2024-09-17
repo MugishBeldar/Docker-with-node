@@ -13,7 +13,7 @@ sudo docker images
 sudo docker image ls
 ```
 
-3. Build docker image with name
+3. Build docker image with name -t means taging image convention is name = <yourdockerusername/ourprojectname>
 
 ```bash
 sudo docker build -t <name>
