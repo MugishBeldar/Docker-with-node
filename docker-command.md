@@ -239,3 +239,5 @@ sudo docker exec -it <container name or container id> sh
 ```
 
 <!-- ################################################################################ -->
+
+for mor command check test-1 repo

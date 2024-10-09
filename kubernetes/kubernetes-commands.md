@@ -111,3 +111,6 @@ xyz kubectl get services
 
 Describe services
 xyz kubectl describe service posts-srv
+
+
+for mor command check test-1 repo
